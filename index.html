@@ -370,27 +370,32 @@
       .title {
         font-size: 2rem;
       }
-
       .profile-section {
         grid-template-columns: 1fr;
       }
-
       .avatar-card {
         max-width: 180px;
         margin: 0 auto;
       }
-    .music-player {
-      display: block;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 6px 24px rgba(79, 172, 254, 0.12);
-      margin-bottom: 36px;
-      backdrop-filter: blur(8px);
+      .album-cover {
+        width: 100%;
+        height: 180px;
+      }
+      .social-links {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
     }
-    .music-player iframe {
-      max-width: 100%;
-      display: block;
+    .music-link {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+    .play-hint {
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 18px;
     }
 
       .album-cover {
@@ -471,7 +476,15 @@
       <a href="https://x.com/shangguanmuxi?s=11" target="_blank" rel="noopener" class="social-link"><svg class="social-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="4" r="2" fill="#4facfe"/><path d="M4 8 L8 14 L12 8" stroke="#4facfe" stroke-width="1.5" stroke-linejoin="round"/></svg>推特</a>
     </div>
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=110 src="//music.163.com/outchain/player?type=0&id=7066122160&auto=1&height=90"></iframe>
+    <a href="https://music.163.com/playlist?id=7066122160" target="_blank" rel="noopener" class="music-link">
+      <div class="album-cover">
+        <img src="https://p1.music.126.net/W-4b64hCb_s8OAGROQXgig==/109951162995598984.jpg" alt="断线" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="player-body">
+        <div class="song-title"><span class="netease-logo">云</span>断线</div>
+        <div class="play-hint">▶ 点击播放</div>
+      </div>
+    </a>
 
     <footer>Copyright © 2026 小沐你老公 版权所有.</footer>
   </div>
